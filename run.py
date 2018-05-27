@@ -24,6 +24,19 @@ def about():
                     page_heading="About",
                     template_var="This (about) heading was generated with a template variable (see run.py)"
                 )
+                
+@app.route('/about/<data_name>/')
+def about_name(data_name):
+    item = {}
+    with open('data/data.json') as f:
+        data = json.load(f)
+        for obj in data:
+            if obj['url'] == data_name:
+                item = obj
+                
+    return render_template('name.html', item=item)
+                
+    
     
 @app.route('/contact')
 def contact():

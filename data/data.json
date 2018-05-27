@@ -2,26 +2,31 @@
     {
         "name": "Name 1",
         "description": "Description 1",
-        "image_source": "Image 1"
+        "image_source": "Image 1",
+        "url": "name1"
     },
     {
         "name": "Name 2",
         "description": "Description 2",
-        "image_source": "Image 2"
+        "image_source": "Image 2",
+        "url": "name2"
     },
     {
         "name": "Name 3",
         "description": "Description 3",
-        "image_source": "Image 3"
+        "image_source": "Image 3",
+        "url": "name3"
     },
     {
         "name": "Name 4",
         "description": "Description 4",
-        "image_source": "Image 4"
+        "image_source": "Image 4",
+        "url": "name4"
     },
     {
         "name": "Name 5",
         "description": "Description 5",
-        "image_source": "Image 5"
+        "image_source": "Image 5",
+        "url": "name5"
     }
 ]

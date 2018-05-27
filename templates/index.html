@@ -61,5 +61,13 @@
     {% endfor %}
 </ul>
 
+<p>Let's put it together and use some advanced routing:</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        <li><a href="/about/{{ item['url'] }}">{{ item['name']}}</a></li>
+    {% endfor %}
+</ul>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa rerum fugiat rem ipsum, repellat architecto tempore? Alias nemo, incidunt earum voluptatum expedita excepturi iure ea, voluptatibus deserunt aliquid impedit, itaque.</p>
 {% endblock %}
