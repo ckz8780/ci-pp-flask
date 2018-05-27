@@ -11,6 +11,6 @@ This repo provides a simple demonstration of the Flask micro-framework for Pytho
 - Extract all files
 - `pip3 install flask` (if you haven't installed flask)
 - `cd [extracted files dir]`
-- Open run.py and remove `IP`, `PORT` and `DEBUG` arguments from `app.run()` method
-- python3 run.py 
+- Open run.py and remove `host` and `port` parameters from `app.run()` function
+- `python3 run.py `
 - Navigate to http://localhost:5000
