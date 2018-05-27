@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ page_heading }}</h2>
+<p>We can flash a message to the user with the flash() method:</p>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+        {% for message in messages %}
+            <li>Flashed Message: {{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<h6>{{ template_var }}:</h6>
+
+<p>Name: {{ form.name }}</p>
+<p>Email: {{ form.email }}</p>
+<p>Number: {{ form.number }}</p>
+<p>Message: {{ form.message }}</p>
+
+<a href="{{ url_for('index') }}">Go Home</a>
+
+{% endblock %}

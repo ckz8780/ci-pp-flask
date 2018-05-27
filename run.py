@@ -1,8 +1,9 @@
 import os
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
+app.secret_key = 'some secret'
 
 @app.route('/')
 def index():
@@ -38,8 +39,19 @@ def about_name(data_name):
                 
     
     
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        form = request.form
+        flash('Thanks {}! We have received your message!'.format(form['name']))
+        
+        return render_template(
+                    'thanks.html',
+                    page_heading="Submission successful!",
+                    template_var="Here's the whole form you submitted",
+                    form=form
+                )
+        
     return render_template(
                     'contact.html',
                     page_heading="Contact",

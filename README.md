@@ -13,3 +13,5 @@ This repo provides a simple demonstration of the Flask micro-framework for Pytho
 - Open run.py and remove `host` and `port` parameters from `app.run()` function
 - `python3 run.py `
 - Navigate to http://localhost:5000
+
+There is also a live version at http://ckz8780-flask-demo.herokuapp.com
