@@ -33,6 +33,22 @@
     {% endfor %}
 </ul>
 
+<p>We can access the loop index by using loop.index:</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        <li>Loop Index: {{ loop.index }}</li>
+    {% endfor %}
+</ul>
+
+<p>Or if you want it 0-based, you can use loop.index0:</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        <li>Loop Index: {{ loop.index0 }}</li>
+    {% endfor %}
+</ul>
+
 <p>Finally, we can use if-then logic (this prints out only key/value pairs if the value contains the string '2'):</p>
 
 <ul class="list-unstyled">
