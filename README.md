@@ -18,4 +18,4 @@ This repo provides a simple demonstration of the Flask micro-framework for Pytho
 
 #### Live version:
 
-There is also a live version at http://ckz8780-flask-demo.herokuapp.com
+There is also a live version at https://ckz8780-flask-demo.herokuapp.com (This is a free dyno and may go to sleep, so be patient on initial load!)
