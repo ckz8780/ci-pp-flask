@@ -10,5 +10,40 @@
 {% endfor %}
 </ul>
 
+<p>Or we can load data from a file and loop through it using keys/values (see run.py, data/data.json and index.html template):</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        <li>
+            <p>Item:</p>
+            <ul>
+                {% for key, value in item.items() %}
+                    <li><strong>Key:</strong> {{ key }}, <strong>Value:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+<p>It's also possible to access keys/values by their names or positions (this prints out all the "name" keys):</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        <li>Name: {{ item.name }}</li>
+    {% endfor %}
+</ul>
+
+<p>Finally, we can use if-then logic (this prints out only key/value pairs if the value contains the string '2'):</p>
+
+<ul class="list-unstyled">
+    {% for item in json_data %}
+        {% for key, value in item.items() %}
+            {% if '2' in value %}
+                <li><strong>Key:</strong> {{ key }}, <strong>Value:</strong> {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa rerum fugiat rem ipsum, repellat architecto tempore? Alias nemo, incidunt earum voluptatum expedita excepturi iure ea, voluptatibus deserunt aliquid impedit, itaque.</p>
 {% endblock %}

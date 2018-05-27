@@ -1,15 +1,20 @@
 import os
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    with open('data/data.json') as f:
+        data = json.load(f)
+    
     return render_template(
                     'index.html',
                     page_heading="Home",
                     template_var="This (home) heading was generated with a template variable (see run.py)",
-                    list_of_numbers=[1, 2, 3, 4,5]
+                    list_of_numbers=[1, 2, 3, 4,5],
+                    json_data = data
                 )
     
 @app.route('/about')

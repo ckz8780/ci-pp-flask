@@ -1,6 +1,6 @@
 # Welcome! 
 
-This repo provides a simple demonstration of the Flask micro-framework for Python. It is part of the Practical Python module for CodeInstitute.
+This repo provides a simple demonstration of the Flask micro-framework for Python. It is part of the Practical Python module for CodeInstitute. It's been lightly modified from the original to show generic examples of rendering templates, for loops, reading files, template logic, etc.
 
 #### Requirements:
 - Python 3+
